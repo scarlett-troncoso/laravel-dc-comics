@@ -41,7 +41,7 @@
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
-                <input type="date" class="form-control" name="type" id="type" aria-describedby="typeHelper"
+                <input type="text" class="form-control" name="type" id="type" aria-describedby="typeHelper"
                     placeholder="Type...." />
                 <small id="helpId" class="form-text text-muted">Type</small>
             </div>
