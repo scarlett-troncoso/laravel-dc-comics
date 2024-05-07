@@ -22,7 +22,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.comics.create');
     }
 
     /**
@@ -30,7 +30,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $comic = Comic::create($data);
+
+        return to_route('admin.comics.show', $comic);
     }
 
     /**
@@ -38,7 +41,6 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
        // dd($comic);
         return view('admin.comics.show', compact('comic')); //appure: ['comic'=> $comic]
     }
