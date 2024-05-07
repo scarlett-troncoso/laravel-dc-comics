@@ -8,7 +8,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $comic->title }}</h5>
                     <p class="card-text">{{ $comic->series }}</p>
-                    <a href=" {{ route('comics.show', $comic) }} " class="btn btn-primary">View</a>
                 </div>
             </div>
             <div class="w-50 m-3">
