@@ -35,7 +35,10 @@
                             <td>{{ $comic->sale_date }}</td>
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->created_at }}</td>
-                            <td> <a href="{{ route('comics.show', $comic) }}">View</a> </td>
+                            <td>
+                                <a href="{{ route('comics.show', $comic) }}">View</a>
+                                <a href="{{ route('comics.edit', $comic) }}">Edit</a>
+                            </td>
                         </tr>
                     @empty
                         <tr class="">
