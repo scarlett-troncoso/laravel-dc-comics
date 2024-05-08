@@ -33,7 +33,7 @@ class ComicController extends Controller
         $data = $request->all();
         $comic = Comic::create($data);
 
-        return to_route('admin.comics.show', $comic);
+        return to_route('comics.show', $comic);
     }
 
     /**
