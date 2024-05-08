@@ -62,7 +62,7 @@ class ComicController extends Controller
     {
         // dd($request->all(), $comic);
         $comic->update($request->all());
-        return to_route('admin.comics.index');
+        return to_route('comics.index'); // to_route('comics.index') perche??
     }
 
     /**
