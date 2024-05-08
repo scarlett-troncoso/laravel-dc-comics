@@ -50,7 +50,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        // dd($comic) //in pagina lo devo vedero con URL: http://127.0.0.1:8000/admin/houses/1/edit
+
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
