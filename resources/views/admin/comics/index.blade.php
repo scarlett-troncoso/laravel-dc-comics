@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="table-responsive container">
+    <div class="container min-vh-100 py-5">
+        <div class="table-responsive">
             <a class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-3" href=" {{ route('comics.create') }} "
                 role="button">
                 <i class="fa-solid fa-plus"></i>
@@ -19,7 +19,7 @@
                         <th scope="col">Sale date</th>
                         <th scope="col">Type</th>
                         <th scope="col">Created at</th>
-                        <th scope="col">Actions</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +36,13 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->created_at }}</td>
                             <td>
-                                <a href="{{ route('comics.show', $comic) }}">View</a>
-                                <a href="{{ route('comics.edit', $comic) }}">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('comics.show', $comic) }}">View</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('comics.edit', $comic) }}">Edit</a>
+                                <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     @empty
@@ -48,5 +53,6 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 @endsection
