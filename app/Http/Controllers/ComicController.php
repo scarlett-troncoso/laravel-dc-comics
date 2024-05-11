@@ -34,7 +34,7 @@ class ComicController extends Controller
 
         $val_data = $request->validate([
             'title' => 'required|max:200',
-            'description' => 'required', 
+            'description' => 'required|min:10', 
             'thumb' => 'required|max:255', 
             'price' => 'required|max:6', 
             'series' => 'required|max:255', 
@@ -73,7 +73,18 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         // dd($request->all(), $comic);
-        $comic->update($request->all());
+        $val_data = $request->validate([
+            'title' => 'required|max:200',
+            'description' => 'required|min:10', 
+            'thumb' => 'required|max:255', 
+            'price' => 'required|max:6', 
+            'series' => 'required|max:255', 
+            'sale_date' => 'required', 
+            'type' => 'required|max:250'
+        ]);
+
+        // $comic->update($request->all());
+        $comic->update($val_data);
         return to_route('comics.index'); // to_route('comics.index') perche??
     }
 
