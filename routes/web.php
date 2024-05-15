@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\Guests\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
 
