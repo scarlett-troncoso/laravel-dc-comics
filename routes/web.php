@@ -16,4 +16,16 @@ use App\Http\Controllers\ComicController;
 
 Route::get('/', [PageController::class, 'index']);
 
+// Route per ogni link del header:
+/*
+Route::get('/characters', [PageController::class, 'characters'])->name('characters');
+Route::get('/movies', [PageController::class, 'movies'])->name('movies');
+Route::get('/tv', [PageController::class, 'tv'])->name('tv');
+Route::get('/games', [PageController::class, 'games'])->name('games');
+Route::get('/collectibles', [PageController::class, 'collectibles'])->name('collectibles');
+Route::get('/fans', [PageController::class, 'fans'])->name('fans');
+Route::get('/videos', [PageController::class, 'videos'])->name('videos');
+Route::get('/news', [PageController::class, 'news'])->name('news');
+Route::get('/shop', [PageController::class, 'shop'])->name('shop');
+*/
 Route::resource('comics', ComicController::class);

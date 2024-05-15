@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('TitlePage', 'Laravel-dc-Comics')</title>
+    <title>@yield('pageTitle', 'Laravel-dc-Comics')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
