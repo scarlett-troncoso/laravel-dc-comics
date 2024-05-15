@@ -20,19 +20,14 @@
 </head>
 
 <body class="antialiased">
-    <header>
-        <div class="p-3">
-            <a href=" {{ route('comics.index') }} " class="btn btn-primary">Admin</a>
-            <a href="/" class="btn btn-primary">Home</a>
-        </div>
 
-    </header>
+    @include('partials.header')
 
     <main>
         @yield('content')
     </main>
 
-    <footer>footer</footer>
+    @include('partials.footer')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
