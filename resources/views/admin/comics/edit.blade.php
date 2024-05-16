@@ -14,8 +14,9 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelper"
-                    placeholder="Type a title of comic" value="{{ old('title', $comic->title) }}" />
+                <input type="number" step="0.01" class="form-control" name="title" id="title"
+                    aria-describedby="titleHelper" placeholder="Type a title of comic"
+                    value="{{ old('title', $comic->title) }}" />
                 @error('title')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
