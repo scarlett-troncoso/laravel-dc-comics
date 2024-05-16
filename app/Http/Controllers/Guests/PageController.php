@@ -9,9 +9,9 @@ class PageController extends Controller
 {
     function index(){
         $comics = Comic::all();
-        return view('welcome', compact('comics'));
+        return view('guests.welcome', compact('comics'));
     }
-    /*
+    
     function characters(){
         return 'characters';
     }
@@ -46,5 +46,5 @@ class PageController extends Controller
 
     function shop(){
         return 'shop';
-    }*/
+    }
 }
