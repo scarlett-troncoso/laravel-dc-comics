@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <h3>Admin Show</h3>
     <div class="container">
         <div class="w-75 d-flex">
             <div class="card m-3 w-25" style="width: 18rem;">
