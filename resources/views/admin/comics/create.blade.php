@@ -32,8 +32,9 @@
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="text" class="form-control @error('price') is-invalid @enderror" name="price"
-                    id="price" aria-describedby="priceHelper" placeholder="50.89" value="{{ old('price') }}" />
+                <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror"
+                    name="price" id="price" aria-describedby="priceHelper" placeholder="50.89"
+                    value="{{ old('price') }}" />
                 @error('price')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
