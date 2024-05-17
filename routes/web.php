@@ -18,7 +18,7 @@ use App\Http\Controllers\Guests\ComicGuestController;
 
 Route::get('/', [PageController::class, 'index'])->name('guests.welcome');
 
-//Route::get('/comics', [ComicGuestController::class, 'index'])->name('guests.comics.index'); //questa non la utilizzo perche sarebbe la mia stessa pagina di welcome
+//Route::get('guests/comics', [ComicGuestController::class, 'index'])->name('guests.comics.index'); //questa non la utilizzo perche sarebbe la mia stessa pagina di welcome
 Route::get('guests/comics/{comic}', [ComicGuestController::class, 'show'])->name('guests.comics.show');
 
 
